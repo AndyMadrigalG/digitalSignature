@@ -1,0 +1,44 @@
+c:\users\andres\documents\visual studio 2012\Projects\FundatecSigner\FundatecSigner\bin\Debug\FundatecSigner.exe.config
+c:\users\andres\documents\visual studio 2012\Projects\FundatecSigner\FundatecSigner\bin\Debug\FundatecSigner.exe
+c:\users\andres\documents\visual studio 2012\Projects\FundatecSigner\FundatecSigner\bin\Debug\FundatecSigner.pdb
+c:\users\andres\documents\visual studio 2012\Projects\FundatecSigner\FundatecSigner\bin\Debug\itextsharp.dll
+c:\users\andres\documents\visual studio 2012\Projects\FundatecSigner\FundatecSigner\bin\Debug\renci.sshnet.dll
+c:\users\andres\documents\visual studio 2012\Projects\FundatecSigner\FundatecSigner\obj\Debug\FundatecSigner.exe
+c:\users\andres\documents\visual studio 2012\Projects\FundatecSigner\FundatecSigner\obj\Debug\FundatecSigner.pdb
+C:\Users\Andres\Downloads\Diseño Firma\Fundatec Signer Backup (Sha1)\FundatecSigner\FundatecSigner\bin\Debug\FundatecSigner.exe.config
+C:\Users\Andres\Downloads\Diseño Firma\Fundatec Signer Backup (Sha1)\FundatecSigner\FundatecSigner\obj\Debug\FundatecSigner.exe
+C:\Users\Andres\Downloads\Diseño Firma\Fundatec Signer Backup (Sha1)\FundatecSigner\FundatecSigner\obj\Debug\FundatecSigner.pdb
+C:\Users\Andres\Downloads\Diseño Firma\Fundatec Signer Backup (Sha1)\FundatecSigner\FundatecSigner\bin\Debug\FundatecSigner.exe
+C:\Users\Andres\Downloads\Diseño Firma\Fundatec Signer Backup (Sha1)\FundatecSigner\FundatecSigner\bin\Debug\FundatecSigner.pdb
+C:\Users\Andres\Downloads\Diseño Firma\Fundatec Signer Backup (Sha1)\FundatecSigner\FundatecSigner\bin\Debug\itextsharp.dll
+C:\Users\Andres\Downloads\Diseño Firma\Fundatec Signer Backup (Sha1)\FundatecSigner\FundatecSigner\bin\Debug\renci.sshnet.dll
+C:\Users\Andres\Downloads\Diseño Firma\Fundatec Signer Backup (Sha1)\FundatecSigner\FundatecSigner\obj\Debug\FundatecSigner.csprojResolveAssemblyReference.cache
+C:\Users\Andres\Downloads\Fundatec Signer Backup (Sha1)\FundatecSigner\FundatecSigner\bin\Debug\FundatecSigner.exe.config
+C:\Users\Andres\Downloads\Fundatec Signer Backup (Sha1)\FundatecSigner\FundatecSigner\obj\Debug\FundatecSigner.exe
+C:\Users\Andres\Downloads\Fundatec Signer Backup (Sha1)\FundatecSigner\FundatecSigner\obj\Debug\FundatecSigner.pdb
+C:\Users\Andres\Downloads\Fundatec Signer Backup (Sha1)\FundatecSigner\FundatecSigner\bin\Debug\FundatecSigner.exe
+C:\Users\Andres\Downloads\Fundatec Signer Backup (Sha1)\FundatecSigner\FundatecSigner\bin\Debug\FundatecSigner.pdb
+C:\Users\Andres\Downloads\Fundatec Signer Backup (Sha1)\FundatecSigner\FundatecSigner\obj\Debug\FundatecSigner.csprojResolveAssemblyReference.cache
+C:\Users\Andres\Downloads\Fundatec Signer Backup v.sha1\FundatecSigner\FundatecSigner\bin\Debug\FundatecSigner.exe.config
+C:\Users\Andres\Downloads\Fundatec Signer Backup v.sha1\FundatecSigner\FundatecSigner\bin\Debug\FundatecSigner.exe
+C:\Users\Andres\Downloads\Fundatec Signer Backup v.sha1\FundatecSigner\FundatecSigner\bin\Debug\FundatecSigner.pdb
+C:\Users\Andres\Downloads\Fundatec Signer Backup v.sha1\FundatecSigner\FundatecSigner\obj\Debug\FundatecSigner.csprojResolveAssemblyReference.cache
+C:\Users\Andres\Downloads\Fundatec Signer Backup v.sha1\FundatecSigner\FundatecSigner\obj\Debug\FundatecSigner.exe
+C:\Users\Andres\Downloads\Fundatec Signer Backup v.sha1\FundatecSigner\FundatecSigner\obj\Debug\FundatecSigner.pdb
+C:\Users\testeruser\OneDrive\Documents\MEGAsync\work\Brete Funda\onedriveJOCA\jocambronero-firma-digital\FundatecSigner v2\FundatecSigner\bin\Debug\Fundatec Signer.exe.config
+C:\Users\testeruser\OneDrive\Documents\MEGAsync\work\Brete Funda\onedriveJOCA\jocambronero-firma-digital\FundatecSigner v2\FundatecSigner\bin\Debug\Fundatec Signer.exe
+C:\Users\testeruser\OneDrive\Documents\MEGAsync\work\Brete Funda\onedriveJOCA\jocambronero-firma-digital\FundatecSigner v2\FundatecSigner\bin\Debug\Fundatec Signer.pdb
+C:\Users\testeruser\OneDrive\Documents\MEGAsync\work\Brete Funda\onedriveJOCA\jocambronero-firma-digital\FundatecSigner v2\FundatecSigner\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\testeruser\OneDrive\Documents\MEGAsync\work\Brete Funda\onedriveJOCA\jocambronero-firma-digital\FundatecSigner v2\FundatecSigner\bin\Debug\itextsharp.dll
+C:\Users\testeruser\OneDrive\Documents\MEGAsync\work\Brete Funda\onedriveJOCA\jocambronero-firma-digital\FundatecSigner v2\FundatecSigner\bin\Debug\Pkcs11Interop.dll
+C:\Users\testeruser\OneDrive\Documents\MEGAsync\work\Brete Funda\onedriveJOCA\jocambronero-firma-digital\FundatecSigner v2\FundatecSigner\bin\Debug\Pkcs11Interop.PDF.dll
+C:\Users\testeruser\OneDrive\Documents\MEGAsync\work\Brete Funda\onedriveJOCA\jocambronero-firma-digital\FundatecSigner v2\FundatecSigner\bin\Debug\Renci.SshNet.dll
+C:\Users\testeruser\OneDrive\Documents\MEGAsync\work\Brete Funda\onedriveJOCA\jocambronero-firma-digital\FundatecSigner v2\FundatecSigner\bin\Debug\itextsharp.xml
+C:\Users\testeruser\OneDrive\Documents\MEGAsync\work\Brete Funda\onedriveJOCA\jocambronero-firma-digital\FundatecSigner v2\FundatecSigner\bin\Debug\Pkcs11Interop.xml
+C:\Users\testeruser\OneDrive\Documents\MEGAsync\work\Brete Funda\onedriveJOCA\jocambronero-firma-digital\FundatecSigner v2\FundatecSigner\bin\Debug\Pkcs11Interop.PDF.xml
+C:\Users\testeruser\OneDrive\Documents\MEGAsync\work\Brete Funda\onedriveJOCA\jocambronero-firma-digital\FundatecSigner v2\FundatecSigner\bin\Debug\Renci.SshNet.xml
+C:\Users\testeruser\OneDrive\Documents\MEGAsync\work\Brete Funda\onedriveJOCA\jocambronero-firma-digital\FundatecSigner v2\FundatecSigner\obj\Debug\FundatecSigner.csproj.SuggestedBindingRedirects.cache
+C:\Users\testeruser\OneDrive\Documents\MEGAsync\work\Brete Funda\onedriveJOCA\jocambronero-firma-digital\FundatecSigner v2\FundatecSigner\obj\Debug\FundatecSigner.csproj.CoreCompileInputs.cache
+C:\Users\testeruser\OneDrive\Documents\MEGAsync\work\Brete Funda\onedriveJOCA\jocambronero-firma-digital\FundatecSigner v2\FundatecSigner\obj\Debug\FundatecSigner.csproj.CopyComplete
+C:\Users\testeruser\OneDrive\Documents\MEGAsync\work\Brete Funda\onedriveJOCA\jocambronero-firma-digital\FundatecSigner v2\FundatecSigner\obj\Debug\Fundatec Signer.exe
+C:\Users\testeruser\OneDrive\Documents\MEGAsync\work\Brete Funda\onedriveJOCA\jocambronero-firma-digital\FundatecSigner v2\FundatecSigner\obj\Debug\Fundatec Signer.pdb

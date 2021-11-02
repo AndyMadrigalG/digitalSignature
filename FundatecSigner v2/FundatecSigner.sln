@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31825.309
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FundatecSigner", "FundatecSigner\FundatecSigner.csproj", "{4D4AD719-27E7-44ED-B9C1-F9D47522F0DA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{80F9EFFC-F2A7-43B7-9074-C4C795474F54}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug_woDrawing|Any CPU = Debug_woDrawing|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		Release_woDrawing|Any CPU = Release_woDrawing|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4D4AD719-27E7-44ED-B9C1-F9D47522F0DA}.Debug_woDrawing|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D4AD719-27E7-44ED-B9C1-F9D47522F0DA}.Debug_woDrawing|Any CPU.Build.0 = Debug|Any CPU
+		{4D4AD719-27E7-44ED-B9C1-F9D47522F0DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D4AD719-27E7-44ED-B9C1-F9D47522F0DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D4AD719-27E7-44ED-B9C1-F9D47522F0DA}.Release_woDrawing|Any CPU.ActiveCfg = Release|Any CPU
+		{4D4AD719-27E7-44ED-B9C1-F9D47522F0DA}.Release_woDrawing|Any CPU.Build.0 = Release|Any CPU
+		{4D4AD719-27E7-44ED-B9C1-F9D47522F0DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D4AD719-27E7-44ED-B9C1-F9D47522F0DA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {64A1FA70-A9CA-4C17-9FF3-72D4B47046A1}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,586 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Pkcs11Interop.PDF</name>
+    </assembly>
+    <members>
+        <member name="T:Net.Pkcs11Interop.PDF.CertUtils">
+            <summary>
+            Utility class that helps with certificate processing
+            </summary>
+        </member>
+        <member name="F:Net.Pkcs11Interop.PDF.CertUtils._x509CertificateParser">
+            <summary>
+            BouncyCastle certificate parser
+            </summary>
+        </member>
+        <member name="M:Net.Pkcs11Interop.PDF.CertUtils.ToDotNetObject(System.Byte[])">
+            <summary>
+            Converts raw certificate data to the instance of .NET X509Certificate2 class
+            </summary>
+            <param name="data">Raw certificate data</param>
+            <returns>Instance of .NET X509Certificate2 class</returns>
+        </member>
+        <member name="M:Net.Pkcs11Interop.PDF.CertUtils.ToDotNetObject(Org.BouncyCastle.X509.X509Certificate)">
+            <summary>
+            Converts the instance of BouncyCastle X509Certificate class to the instance of .NET X509Certificate2 class
+            </summary>
+            <param name="cert">Instance of BouncyCastle X509Certificate class</param>
+            <returns>Instance of .NET X509Certificate2 class</returns>
+        </member>
+        <member name="M:Net.Pkcs11Interop.PDF.CertUtils.ToBouncyCastleObject(System.Byte[])">
+            <summary>
+            Converts raw certificate data to the instance of BouncyCastle X509Certificate class
+            </summary>
+            <param name="data">Raw certificate data</param>
+            <returns>Instance of BouncyCastle X509Certificate class</returns>
+        </member>
+        <member name="M:Net.Pkcs11Interop.PDF.CertUtils.ToBouncyCastleObject(System.Security.Cryptography.X509Certificates.X509Certificate2)">
+            <summary>
+            Converts the instance of .NET X509Certificate2 class to the instance of BouncyCastle X509Certificate class
+            </summary>
+            <param name="cert">Instance of .NET X509Certificate2 class</param>
+            <returns>Instance of BouncyCastle X509Certificate class</returns>
+        </member>
+        <member name="M:Net.Pkcs11Interop.PDF.CertUtils.ToDerEncodedByteArray(Org.BouncyCastle.X509.X509Certificate)">
+            <summary>
+            Converts the instance of BouncyCastle X509Certificate class to the DER encoded byte array
+            </summary>
+            <param name="cert">Instance of BouncyCastle X509Certificate class</param>
+            <returns>DER encoded byte array</returns>
+        </member>
+        <member name="M:Net.Pkcs11Interop.PDF.CertUtils.ToDerEncodedByteArray(System.Security.Cryptography.X509Certificates.X509Certificate2)">
+            <summary>
+            Converts the instance of .NET X509Certificate2 class to the DER encoded byte array
+            </summary>
+            <param name="cert">Instance of .NET X509Certificate2 class</param>
+            <returns>DER encoded byte array</returns>
+        </member>
+        <member name="M:Net.Pkcs11Interop.PDF.CertUtils.IsSelfSigned(Org.BouncyCastle.X509.X509Certificate)">
+            <summary>
+            Checks whether certificate is self-signed
+            </summary>
+            <param name="certificate">Certificate to be checked</param>
+            <returns>True if certificate is self-signed; false otherwise</returns>
+        </member>
+        <member name="M:Net.Pkcs11Interop.PDF.CertUtils.BuildCertPath(System.Byte[],System.Collections.Generic.List{System.Byte[]})">
+            <summary>
+            Builds certification path for provided signing certificate
+            </summary>
+            <param name="signingCertificate">Signing certificate</param>
+            <param name="otherCertificates">Other certificates that should be used in path building process. Self-signed certificates from this list are used as trust anchors.</param>
+            <returns>Certification path for provided signing certificate</returns>
+        </member>
+        <member name="T:Net.Pkcs11Interop.PDF.HashAlgorithm">
+            <summary>
+            Hash algorithm
+            </summary>
+        </member>
+        <member name="F:Net.Pkcs11Interop.PDF.HashAlgorithm.SHA1">
+            <summary>
+            The SHA1 hash algorithm
+            </summary>
+        </member>
+        <member name="F:Net.Pkcs11Interop.PDF.HashAlgorithm.SHA256">
+            <summary>
+            The SHA256 hash algorithm
+            </summary>
+        </member>
+        <member name="F:Net.Pkcs11Interop.PDF.HashAlgorithm.SHA384">
+            <summary>
+            The SHA384 hash algorithm
+            </summary>
+        </member>
+        <member name="F:Net.Pkcs11Interop.PDF.HashAlgorithm.SHA512">
+            <summary>
+            The SHA512 hash algorithm
+            </summary>
+        </member>
+        <member name="T:Net.Pkcs11Interop.PDF.ObjectNotFoundException">
+            <summary>
+            Exception indicating that requested object was not found on the token
+            </summary>
+        </member>
+        <member name="M:Net.Pkcs11Interop.PDF.ObjectNotFoundException.#ctor">
+            <summary>
+            Initializes a new instance of the ObjectNotFoundException class
+            </summary>
+        </member>
+        <member name="M:Net.Pkcs11Interop.PDF.ObjectNotFoundException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the ObjectNotFoundException class with a specified error message
+            </summary>
+            <param name="message">The message that describes the error</param>
+        </member>
+        <member name="M:Net.Pkcs11Interop.PDF.ObjectNotFoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the ObjectNotFoundException class with a specified error message and a reference to the inner exception that is the cause of this exception
+            </summary>
+            <param name="message">The error message that explains the reason for the exception</param>
+            <param name="innerException">The exception that is the cause of the current exception, or a null reference if no inner exception is specified.</param>
+        </member>
+        <member name="T:Net.Pkcs11Interop.PDF.Certificate">
+            <summary>
+            Represents certificate accessible via PKCS#11 interface
+            </summary>
+        </member>
+        <member name="F:Net.Pkcs11Interop.PDF.Certificate._id">
+            <summary>
+            Hex encoded string with identifier (value of CKA_ID attribute) of the certificate
+            </summary>
+        </member>
+        <member name="P:Net.Pkcs11Interop.PDF.Certificate.Id">
+            <summary>
+            Hex encoded string with identifier (value of CKA_ID attribute) of the certificate
+            </summary>
+        </member>
+        <member name="F:Net.Pkcs11Interop.PDF.Certificate._label">
+            <summary>
+            Label (value of CKA_LABEL attribute) of the certificate
+            </summary>
+        </member>
+        <member name="P:Net.Pkcs11Interop.PDF.Certificate.Label">
+            <summary>
+            Label (value of CKA_LABEL attribute) of the certificate
+            </summary>
+        </member>
+        <member name="F:Net.Pkcs11Interop.PDF.Certificate._data">
+            <summary>
+            DER encoded certificate data
+            </summary>
+        </member>
+        <member name="P:Net.Pkcs11Interop.PDF.Certificate.Data">
+            <summary>
+            DER encoded certificate data
+            </summary>
+        </member>
+        <member name="F:Net.Pkcs11Interop.PDF.Certificate._publicKey">
+            <summary>
+            Certified public key
+            </summary>
+        </member>
+        <member name="P:Net.Pkcs11Interop.PDF.Certificate.PublicKey">
+            <summary>
+            Certified public key
+            </summary>
+        </member>
+        <member name="M:Net.Pkcs11Interop.PDF.Certificate.#ctor(System.String,System.String,System.Byte[])">
+            <summary>
+            Intitializes class instance
+            </summary>
+            <param name="id">Hex encoded string with identifier (value of CKA_ID attribute) of the certificate</param>
+            <param name="label">Label (value of CKA_LABEL attribute) of the certificate</param>
+            <param name="data">DER encoded certificate data (value of CKA_VALUE attribute)</param>
+        </member>
+        <member name="M:Net.Pkcs11Interop.PDF.Certificate.Matches(Net.Pkcs11Interop.PDF.PrivateKey)">
+            <summary>
+            Checks whether specified private key matches this certificate
+            </summary>
+            <param name="privateKey">Private key to be checked</param>
+            <returns>Null if match cannot be performed, true if private key matches, false otherwise</returns>
+        </member>
+        <member name="M:Net.Pkcs11Interop.PDF.Certificate.Matches(Org.BouncyCastle.X509.X509Certificate)">
+            <summary>
+            Checks whether specified certificate matches this certificate
+            </summary>
+            <param name="certificate">Certificate to be checked</param>
+            <returns>Null if match cannot be performed, true if certificate matches, false otherwise</returns>
+        </member>
+        <member name="M:Net.Pkcs11Interop.PDF.Certificate.Matches(System.Security.Cryptography.X509Certificates.X509Certificate2)">
+            <summary>
+            Checks whether specified certificate matches this certificate
+            </summary>
+            <param name="certificate">Certificate to be checked</param>
+            <returns>Null if match cannot be performed, true if certificate matches, false otherwise</returns>
+        </member>
+        <member name="T:Net.Pkcs11Interop.PDF.Pkcs11Explorer">
+            <summary>
+            Explores devices accessible via PKCS#11 interface
+            </summary>
+        </member>
+        <member name="F:Net.Pkcs11Interop.PDF.Pkcs11Explorer._disposed">
+            <summary>
+            Flag indicating whether instance has been disposed
+            </summary>
+        </member>
+        <member name="F:Net.Pkcs11Interop.PDF.Pkcs11Explorer._pkcs11">
+            <summary>
+            High level PKCS#11 wrapper
+            </summary>
+        </member>
+        <member name="M:Net.Pkcs11Interop.PDF.Pkcs11Explorer.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the Pkcs11Explorer class
+            </summary>
+            <param name="libraryPath">Path to the unmanaged PCKS#11 library</param>
+        </member>
+        <member name="M:Net.Pkcs11Interop.PDF.Pkcs11Explorer.GetTokens">
+            <summary>
+            Gets list of tokens (smartcards) accessible via PKCS#11 interface
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net.Pkcs11Interop.PDF.Pkcs11Explorer.GetTokenObjects(Net.Pkcs11Interop.PDF.Token,System.Boolean,System.String,System.Collections.Generic.List{Net.Pkcs11Interop.PDF.PrivateKey}@,System.Collections.Generic.List{Net.Pkcs11Interop.PDF.Certificate}@)">
+            <summary>
+            Gets private keys and certificates stored in token (smartcard) accessible via PKCS#11 interface
+            </summary>
+            <param name="token">PKCS#11 token (smartcard) that should be explored</param>
+            <param name="login">Flag indicating whether token login with provided PIN should be performed</param>
+            <param name="pin">PIN for the token (smartcard)</param>
+            <param name="privateKeys">List of private keys stored in token (smartcard)</param>
+            <param name="certificates">List of certificates stored in token (smartcard)</param>
+        </member>
+        <member name="M:Net.Pkcs11Interop.PDF.Pkcs11Explorer.Dispose">
+            <summary>
+            Disposes object
+            </summary>
+        </member>
+        <member name="M:Net.Pkcs11Interop.PDF.Pkcs11Explorer.Dispose(System.Boolean)">
+            <summary>
+            Disposes object
+            </summary>
+            <param name="disposing">Flag indicating whether managed resources should be disposed</param>
+        </member>
+        <member name="M:Net.Pkcs11Interop.PDF.Pkcs11Explorer.Finalize">
+            <summary>
+            Class destructor that disposes object if caller forgot to do so
+            </summary>
+        </member>
+        <member name="T:Net.Pkcs11Interop.PDF.PrivateKey">
+            <summary>
+            Represents private key accessible via PKCS#11 interface
+            </summary>
+        </member>
+        <member name="F:Net.Pkcs11Interop.PDF.PrivateKey._id">
+            <summary>
+            Hex encoded string with identifier (value of CKA_ID attribute) of the private key
+            </summary>
+        </member>
+        <member name="P:Net.Pkcs11Interop.PDF.PrivateKey.Id">
+            <summary>
+            Hex encoded string with identifier (value of CKA_ID attribute) of the private key
+            </summary>
+        </member>
+        <member name="F:Net.Pkcs11Interop.PDF.PrivateKey._label">
+            <summary>
+            Label (value of CKA_LABEL attribute) of the private key
+            </summary>
+        </member>
+        <member name="P:Net.Pkcs11Interop.PDF.PrivateKey.Label">
+            <summary>
+            Label (value of CKA_LABEL attribute) of the private key
+            </summary>
+        </member>
+        <member name="F:Net.Pkcs11Interop.PDF.PrivateKey._publicKey">
+            <summary>
+            Public part of the key. May be null for unsupported key types.
+            </summary>
+        </member>
+        <member name="P:Net.Pkcs11Interop.PDF.PrivateKey.PublicKey">
+            <summary>
+            Public part of the key. May be null for unsupported key types.
+            </summary>
+        </member>
+        <member name="M:Net.Pkcs11Interop.PDF.PrivateKey.#ctor(System.String,System.String,Org.BouncyCastle.Crypto.AsymmetricKeyParameter)">
+            <summary>
+            Intitializes class instance
+            </summary>
+            <param name="id">Hex encoded string with identifier (value of CKA_ID attribute) of the private key</param>
+            <param name="label">Label (value of CKA_LABEL attribute) of the private key</param>
+            <param name="publicKey">Public part of the key or null for unsupported key types</param>
+        </member>
+        <member name="M:Net.Pkcs11Interop.PDF.PrivateKey.Matches(Net.Pkcs11Interop.PDF.Certificate)">
+            <summary>
+            Checks whether specified certificate matches this private key
+            </summary>
+            <param name="certificate">Certificate to be checked</param>
+            <returns>Null if match cannot be performed, true if certificate matches, false otherwise</returns>
+        </member>
+        <member name="M:Net.Pkcs11Interop.PDF.PrivateKey.Matches(Org.BouncyCastle.X509.X509Certificate)">
+            <summary>
+            Checks whether specified certificate matches this private key
+            </summary>
+            <param name="certificate">Certificate to be checked</param>
+            <returns>Null if match cannot be performed, true if certificate matches, false otherwise</returns>
+        </member>
+        <member name="M:Net.Pkcs11Interop.PDF.PrivateKey.Matches(System.Security.Cryptography.X509Certificates.X509Certificate2)">
+            <summary>
+            Checks whether specified certificate matches this private key
+            </summary>
+            <param name="certificate">Certificate to be checked</param>
+            <returns>Null if match cannot be performed, true if certificate matches, false otherwise</returns>
+        </member>
+        <member name="T:Net.Pkcs11Interop.PDF.Pkcs11RsaSignature">
+            <summary>
+            PKCS#1 v1.5 RSA signature creator that uses private key stored on PKCS#11 compatible device.
+            In multithreaded environment one instance of this class should be reused by all the threads.
+            </summary>
+        </member>
+        <member name="F:Net.Pkcs11Interop.PDF.Pkcs11RsaSignature._disposed">
+            <summary>
+            Flag indicating whether instance has been disposed
+            </summary>
+        </member>
+        <member name="F:Net.Pkcs11Interop.PDF.Pkcs11RsaSignature._pkcs11">
+            <summary>
+            High level PKCS#11 wrapper
+            </summary>
+        </member>
+        <member name="F:Net.Pkcs11Interop.PDF.Pkcs11RsaSignature._slot">
+            <summary>
+            Logical reader with token used for signing
+            </summary>
+        </member>
+        <member name="F:Net.Pkcs11Interop.PDF.Pkcs11RsaSignature._session">
+            <summary>
+            Master session where user is logged in
+            </summary>
+        </member>
+        <member name="F:Net.Pkcs11Interop.PDF.Pkcs11RsaSignature._privateKeyHandle">
+            <summary>
+            Handle of private key used for signing 
+            </summary>
+        </member>
+        <member name="F:Net.Pkcs11Interop.PDF.Pkcs11RsaSignature._ckaLabel">
+            <summary>
+            Label (value of CKA_LABEL attribute) of the private key used for signing
+            </summary>
+        </member>
+        <member name="F:Net.Pkcs11Interop.PDF.Pkcs11RsaSignature._ckaId">
+            <summary>
+            Identifier (value of CKA_ID attribute) of the private key used for signing
+            </summary>
+        </member>
+        <member name="F:Net.Pkcs11Interop.PDF.Pkcs11RsaSignature._hashAlgorihtm">
+            <summary>
+            Hash algorihtm used for the signature creation
+            </summary>
+        </member>
+        <member name="F:Net.Pkcs11Interop.PDF.Pkcs11RsaSignature._signingCertificate">
+            <summary>
+            Raw data of certificate related to private key used for signing
+            </summary>
+        </member>
+        <member name="F:Net.Pkcs11Interop.PDF.Pkcs11RsaSignature._allCertificates">
+            <summary>
+            Raw data of all certificates stored in device
+            </summary>
+        </member>
+        <member name="M:Net.Pkcs11Interop.PDF.Pkcs11RsaSignature.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,Net.Pkcs11Interop.PDF.HashAlgorithm)">
+            <summary>
+            Initializes a new instance of the Pkcs11Signature class
+            </summary>
+            <param name="libraryPath">Path to the unmanaged PCKS#11 library</param>
+            <param name="tokenSerial">Serial number of the token (smartcard) that contains signing key. May be null if tokenLabel is specified.</param>
+            <param name="tokenLabel">Label of of the token (smartcard) that contains signing key. May be null if tokenSerial is specified.</param>
+            <param name="pin">PIN for the token (smartcard)</param>
+            <param name="ckaLabel">Label (value of CKA_LABEL attribute) of the private key used for signing. May be null if ckaId is specified.</param>
+            <param name="ckaId">Hex encoded string with identifier (value of CKA_ID attribute) of the private key used for signing. May be null if ckaLabel is specified.</param>
+            <param name="hashAlgorihtm">Hash algorihtm used for the signature creation</param>
+        </member>
+        <member name="M:Net.Pkcs11Interop.PDF.Pkcs11RsaSignature.#ctor(System.String,System.String,System.String,System.Byte[],System.String,System.Byte[],Net.Pkcs11Interop.PDF.HashAlgorithm)">
+            <summary>
+            Initializes a new instance of the Pkcs11Signature class
+            </summary>
+            <param name="libraryPath">Path to the unmanaged PCKS#11 library</param>
+            <param name="tokenSerial">Serial number of the token (smartcard) that contains signing key. May be null if tokenLabel is specified.</param>
+            <param name="tokenLabel">Label of of the token (smartcard) that contains signing key. May be null if tokenSerial is specified.</param>
+            <param name="pin">PIN for the token (smartcard)</param>
+            <param name="ckaLabel">Label (value of CKA_LABEL attribute) of the private key used for signing. May be null if ckaId is specified.</param>
+            <param name="ckaId">Identifier (value of CKA_ID attribute) of the private key used for signing. May be null if ckaLabel is specified.</param>
+            <param name="hashAlgorihtm">Hash algorihtm used for the signature creation</param>
+        </member>
+        <member name="M:Net.Pkcs11Interop.PDF.Pkcs11RsaSignature.InitializePkcs11Signature(System.String,System.String,System.String,System.Byte[],System.String,System.Byte[],Net.Pkcs11Interop.PDF.HashAlgorithm)">
+            <summary>
+            Initializes a new instance of the Pkcs11Signature class
+            </summary>
+            <param name="libraryPath">Path to the unmanaged PCKS#11 library</param>
+            <param name="tokenSerial">Serial number of the token (smartcard) that contains signing key. May be null if tokenLabel is specified.</param>
+            <param name="tokenLabel">Label of of the token (smartcard) that contains signing key. May be null if tokenSerial is specified.</param>
+            <param name="pin">PIN for the token (smartcard)</param>
+            <param name="ckaLabel">Label (value of CKA_LABEL attribute) of the private key used for signing. May be null if ckaId is specified.</param>
+            <param name="ckaId">Identifier (value of CKA_ID attribute) of the private key used for signing. May be null if ckaLabel is specified.</param>
+            <param name="hashAlgorihtm">Hash algorihtm used for the signature creation</param>
+        </member>
+        <member name="M:Net.Pkcs11Interop.PDF.Pkcs11RsaSignature.GetSigningCertificate">
+            <summary>
+            Gets the raw data of certificate related to private key used for signing
+            </summary>
+            <returns>Raw data of certificate related to private key used for signing</returns>
+        </member>
+        <member name="M:Net.Pkcs11Interop.PDF.Pkcs11RsaSignature.GetAllCertificates">
+            <summary>
+            Gets the raw data of all certificates stored in device
+            </summary>
+            <returns>Raw data of all certificates stored in device</returns>
+        </member>
+        <member name="M:Net.Pkcs11Interop.PDF.Pkcs11RsaSignature.GetCertificateAsByteArray">
+            <summary>
+            Gets the raw data of certificate related to private key used for signing
+            </summary>
+            <returns>Raw data of certificate related to private key used for signing</returns>
+        </member>
+        <member name="M:Net.Pkcs11Interop.PDF.Pkcs11RsaSignature.GetCertificateAsX509Certificate">
+            <summary>
+            Gets the certificate related to private key used for signing as Org.BouncyCastle.X509.X509Certificate
+            </summary>
+            <returns>Certificate related to private key used for signing as Org.BouncyCastle.X509.X509Certificate</returns>
+        </member>
+        <member name="M:Net.Pkcs11Interop.PDF.Pkcs11RsaSignature.GetCertificateAsX509Certificate2">
+            <summary>
+            Gets the certificate related to private key used for signing as System.Security.Cryptography.X509Certificates.X509Certificate2
+            </summary>
+            <returns>Certificate related to private key used for signing as System.Security.Cryptography.X509Certificates.X509Certificate2</returns>
+        </member>
+        <member name="M:Net.Pkcs11Interop.PDF.Pkcs11RsaSignature.GetHashAlgorithm">
+            <summary>
+            Returns the hash algorithm
+            </summary>
+            <returns>The hash algorithm ("SHA1", "SHA256", ...)</returns>
+        </member>
+        <member name="M:Net.Pkcs11Interop.PDF.Pkcs11RsaSignature.GetEncryptionAlgorithm">
+            <summary>
+            Returns the encryption algorithm used for signing
+            </summary>
+            <returns>The encryption algorithm ("RSA")</returns>
+        </member>
+        <member name="M:Net.Pkcs11Interop.PDF.Pkcs11RsaSignature.Sign(System.Byte[])">
+            <summary>
+            Signs the specified message using the encryption algorithm in combination with the digest algorithm
+            </summary>
+            <param name="message">the message you want to be hashed and signed</param>
+            <returns>A signed message digest</returns>
+        </member>
+        <member name="M:Net.Pkcs11Interop.PDF.Pkcs11RsaSignature.FindSlot(System.String,System.String)">
+            <summary>
+            Finds slot containing the token that matches specified criteria
+            </summary>
+            <param name="tokenSerial">Serial number of token that should be found</param>
+            <param name="tokenLabel">Label of token that should be found</param>
+            <returns>Slot containing the token that matches specified criteria</returns>
+        </member>
+        <member name="M:Net.Pkcs11Interop.PDF.Pkcs11RsaSignature.FindPrivateKey(System.String,System.Byte[])">
+            <summary>
+            Finds private key that matches specified criteria
+            </summary>
+            <param name="ckaLabel">Label (value of CKA_LABEL attribute) of the private key</param>
+            <param name="ckaId">Identifier (value of CKA_ID attribute) of the private key</param>
+            <returns>Handle of private key that matches specified criteria</returns>
+        </member>
+        <member name="M:Net.Pkcs11Interop.PDF.Pkcs11RsaSignature.CreateDigestInfo(System.Byte[],System.String)">
+            <summary>
+            Creates PKCS#1 DigestInfo
+            </summary>
+            <param name="hash">Hash value</param>
+            <param name="hashOid">Hash algorithm OID</param>
+            <returns>DER encoded PKCS#1 DigestInfo</returns>
+        </member>
+        <member name="M:Net.Pkcs11Interop.PDF.Pkcs11RsaSignature.ComputeDigest(Org.BouncyCastle.Crypto.IDigest,System.Byte[])">
+            <summary>
+            Computes hash of the data
+            </summary>
+            <param name="digest">Hash algorithm implementation</param>
+            <param name="data">Data that should be processed</param>
+            <returns>Hash of data</returns>
+        </member>
+        <member name="M:Net.Pkcs11Interop.PDF.Pkcs11RsaSignature.Dispose">
+            <summary>
+            Disposes object
+            </summary>
+        </member>
+        <member name="M:Net.Pkcs11Interop.PDF.Pkcs11RsaSignature.Dispose(System.Boolean)">
+            <summary>
+            Disposes object
+            </summary>
+            <param name="disposing">Flag indicating whether managed resources should be disposed</param>
+        </member>
+        <member name="M:Net.Pkcs11Interop.PDF.Pkcs11RsaSignature.Finalize">
+            <summary>
+            Class destructor that disposes object if caller forgot to do so
+            </summary>
+        </member>
+        <member name="T:Net.Pkcs11Interop.PDF.Token">
+            <summary>
+            PKCS#11 token (smartcard)
+            </summary>
+        </member>
+        <member name="F:Net.Pkcs11Interop.PDF.Token.Slot">
+            <summary>
+            PKCS#11 slot
+            </summary>
+        </member>
+        <member name="F:Net.Pkcs11Interop.PDF.Token._manufacturerId">
+            <summary>
+            Token manufacturer
+            </summary>
+        </member>
+        <member name="P:Net.Pkcs11Interop.PDF.Token.ManufacturerId">
+            <summary>
+            Token manufacturer
+            </summary>
+        </member>
+        <member name="F:Net.Pkcs11Interop.PDF.Token._model">
+            <summary>
+            Token model
+            </summary>
+        </member>
+        <member name="P:Net.Pkcs11Interop.PDF.Token.Model">
+            <summary>
+            Token model
+            </summary>
+        </member>
+        <member name="F:Net.Pkcs11Interop.PDF.Token._serialNumber">
+            <summary>
+            Token serial number
+            </summary>
+        </member>
+        <member name="P:Net.Pkcs11Interop.PDF.Token.SerialNumber">
+            <summary>
+            Token serial number
+            </summary>
+        </member>
+        <member name="F:Net.Pkcs11Interop.PDF.Token._label">
+            <summary>
+            Token label
+            </summary>
+        </member>
+        <member name="P:Net.Pkcs11Interop.PDF.Token.Label">
+            <summary>
+            Token label
+            </summary>
+        </member>
+        <member name="M:Net.Pkcs11Interop.PDF.Token.#ctor(Net.Pkcs11Interop.HighLevelAPI.Slot,System.String,System.String,System.String,System.String)">
+            <summary>
+            Intitializes class instance
+            </summary>
+            <param name="slot">PKCS#11 slot</param>
+            <param name="manufacturerId">Token manufacturer</param>
+            <param name="model">Token model</param>
+            <param name="serialNumber">Token serial number</param>
+            <param name="label">Token label</param>
+        </member>
+        <member name="T:Net.Pkcs11Interop.PDF.TokenNotFoundException">
+            <summary>
+            Exception indicating that requested token was not found
+            </summary>
+        </member>
+        <member name="M:Net.Pkcs11Interop.PDF.TokenNotFoundException.#ctor">
+            <summary>
+            Initializes a new instance of the TokenNotFoundException class
+            </summary>
+        </member>
+        <member name="M:Net.Pkcs11Interop.PDF.TokenNotFoundException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the TokenNotFoundException class with a specified error message
+            </summary>
+            <param name="message">The message that describes the error</param>
+        </member>
+        <member name="M:Net.Pkcs11Interop.PDF.TokenNotFoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the TokenNotFoundException class with a specified error message and a reference to the inner exception that is the cause of this exception
+            </summary>
+            <param name="message">The error message that explains the reason for the exception</param>
+            <param name="innerException">The exception that is the cause of the current exception, or a null reference if no inner exception is specified.</param>
+        </member>
+    </members>
+</doc>

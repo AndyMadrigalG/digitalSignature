@@ -1,0 +1,25 @@
+C:\Users\Andres\Downloads\Fundatec Signer Backup v.sha1\FundatecSigner\FundatecSigner\bin\Release\FundatecSigner.exe.config
+C:\Users\Andres\Downloads\Fundatec Signer Backup v.sha1\FundatecSigner\FundatecSigner\bin\Release\FundatecSigner.exe
+C:\Users\Andres\Downloads\Fundatec Signer Backup v.sha1\FundatecSigner\FundatecSigner\bin\Release\FundatecSigner.pdb
+C:\Users\Andres\Downloads\Fundatec Signer Backup v.sha1\FundatecSigner\FundatecSigner\bin\Release\itextsharp.dll
+C:\Users\Andres\Downloads\Fundatec Signer Backup v.sha1\FundatecSigner\FundatecSigner\bin\Release\Pkcs11Interop.dll
+C:\Users\Andres\Downloads\Fundatec Signer Backup v.sha1\FundatecSigner\FundatecSigner\bin\Release\Pkcs11Interop.PDF.dll
+C:\Users\Andres\Downloads\Fundatec Signer Backup v.sha1\FundatecSigner\FundatecSigner\bin\Release\renci.sshnet.dll
+C:\Users\Andres\Downloads\Fundatec Signer Backup v.sha1\FundatecSigner\FundatecSigner\bin\Release\itextsharp.xml
+C:\Users\Andres\Downloads\Fundatec Signer Backup v.sha1\FundatecSigner\FundatecSigner\bin\Release\Pkcs11Interop.xml
+C:\Users\Andres\Downloads\Fundatec Signer Backup v.sha1\FundatecSigner\FundatecSigner\bin\Release\Pkcs11Interop.PDF.xml
+C:\Users\Andres\Downloads\Fundatec Signer Backup v.sha1\FundatecSigner\FundatecSigner\obj\Release\FundatecSigner.csprojResolveAssemblyReference.cache
+C:\Users\Andres\Downloads\Fundatec Signer Backup v.sha1\FundatecSigner\FundatecSigner\obj\Release\FundatecSigner.exe
+C:\Users\Andres\Downloads\Fundatec Signer Backup v.sha1\FundatecSigner\FundatecSigner\obj\Release\FundatecSigner.pdb
+C:\Users\Andres\Documents\W.I.P\Fundatec Signer Sha2\FundatecSigner v2 BETA\FundatecSigner\bin\Release\Fundatec Signer.exe.config
+C:\Users\Andres\Documents\W.I.P\Fundatec Signer Sha2\FundatecSigner v2 BETA\FundatecSigner\bin\Release\Fundatec Signer.exe
+C:\Users\Andres\Documents\W.I.P\Fundatec Signer Sha2\FundatecSigner v2 BETA\FundatecSigner\bin\Release\Fundatec Signer.pdb
+C:\Users\Andres\Documents\W.I.P\Fundatec Signer Sha2\FundatecSigner v2 BETA\FundatecSigner\bin\Release\itextsharp.dll
+C:\Users\Andres\Documents\W.I.P\Fundatec Signer Sha2\FundatecSigner v2 BETA\FundatecSigner\bin\Release\Pkcs11Interop.dll
+C:\Users\Andres\Documents\W.I.P\Fundatec Signer Sha2\FundatecSigner v2 BETA\FundatecSigner\bin\Release\Pkcs11Interop.PDF.dll
+C:\Users\Andres\Documents\W.I.P\Fundatec Signer Sha2\FundatecSigner v2 BETA\FundatecSigner\bin\Release\renci.sshnet.dll
+C:\Users\Andres\Documents\W.I.P\Fundatec Signer Sha2\FundatecSigner v2 BETA\FundatecSigner\bin\Release\itextsharp.xml
+C:\Users\Andres\Documents\W.I.P\Fundatec Signer Sha2\FundatecSigner v2 BETA\FundatecSigner\bin\Release\Pkcs11Interop.xml
+C:\Users\Andres\Documents\W.I.P\Fundatec Signer Sha2\FundatecSigner v2 BETA\FundatecSigner\bin\Release\Pkcs11Interop.PDF.xml
+C:\Users\Andres\Documents\W.I.P\Fundatec Signer Sha2\FundatecSigner v2 BETA\FundatecSigner\obj\Release\Fundatec Signer.exe
+C:\Users\Andres\Documents\W.I.P\Fundatec Signer Sha2\FundatecSigner v2 BETA\FundatecSigner\obj\Release\Fundatec Signer.pdb
